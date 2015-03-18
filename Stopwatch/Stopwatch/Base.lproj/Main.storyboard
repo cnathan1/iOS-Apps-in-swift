@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6254" systemVersion="14C109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="ufC-wZ-h7g">
+            <objects>
+                <viewController id="vXZ-lx-hvc" customClass="ViewController" customModule="Stopwatch" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="jyV-Pf-zRb"/>
+                        <viewControllerLayoutGuide type="bottom" id="2fi-mo-0CV"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="SZO-t7-6Gx">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                                <items>
+                                    <navigationItem title="Stopwatch" id="kMe-EV-XIL">
+                                        <barButtonItem key="leftBarButtonItem" systemItem="pause" id="XHk-Cg-z8X">
+                                            <connections>
+                                                <action selector="pause:" destination="vXZ-lx-hvc" id="BYK-wt-EZf"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="AJ4-Te-29u">
+                                <rect key="frame" x="0.0" y="524" width="320" height="44"/>
+                                <items>
+                                    <barButtonItem systemItem="stop" id="APK-Tn-N26">
+                                        <connections>
+                                            <action selector="stop:" destination="vXZ-lx-hvc" id="2T5-mV-jYB"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="5a6-GB-zo4"/>
+                                    <barButtonItem systemItem="play" id="ZHj-2V-txa">
+                                        <connections>
+                                            <action selector="play:" destination="vXZ-lx-hvc" id="PaT-sN-nF5"/>
+                                        </connections>
+                                    </barButtonItem>
+                                </items>
+                            </toolbar>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yYt-Hz-nQK">
+                                <rect key="frame" x="62" y="206" width="178" height="142"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="178" id="A2X-Xm-JHo"/>
+                                    <constraint firstAttribute="height" constant="142" id="xsz-hS-Rya"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="74"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="SZO-t7-6Gx" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" constant="-16" id="5Ug-OU-Mjt"/>
+                            <constraint firstAttribute="centerX" secondItem="yYt-Hz-nQK" secondAttribute="centerX" id="EIt-tT-byp"/>
+                            <constraint firstItem="AJ4-Te-29u" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" constant="-16" id="Fwt-fg-TwR"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="SZO-t7-6Gx" secondAttribute="trailing" constant="-16" id="HrO-Ia-9Ee"/>
+                            <constraint firstItem="SZO-t7-6Gx" firstAttribute="top" secondItem="kh9-bI-dsS" secondAttribute="topMargin" id="ULH-az-N2K"/>
+                            <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="AJ4-Te-29u" secondAttribute="bottom" id="adb-w8-cch"/>
+                            <constraint firstAttribute="centerY" secondItem="yYt-Hz-nQK" secondAttribute="centerY" id="nde-GI-1d2"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="AJ4-Te-29u" secondAttribute="trailing" constant="-16" id="pOD-Fk-y0o"/>
+                            <constraint firstAttribute="centerX" secondItem="yYt-Hz-nQK" secondAttribute="centerX" id="qCX-iu-0EV"/>
+                            <constraint firstAttribute="centerY" secondItem="yYt-Hz-nQK" secondAttribute="centerY" id="wRU-Cd-WY5"/>
+                        </constraints>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                    <connections>
+                        <outlet property="time" destination="yYt-Hz-nQK" id="MIa-ls-eMQ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
+    </scenes>
+</document>
